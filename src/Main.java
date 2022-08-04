@@ -9,7 +9,7 @@ public class Main {
         System.out.println(student(34, -12));
 
     }
-    public static String student(double ageOfaPerson, double outsideTemperatura) {
+    public static String student(int  ageOfaPerson, int  outsideTemperatura) {
         if (ageOfaPerson >= 20 && ageOfaPerson <= 45 && outsideTemperatura >= -20 && outsideTemperatura <= 30) {
             return "You can go for a walk";
         } else if (ageOfaPerson < 20 && outsideTemperatura >= 0 && outsideTemperatura <= 28) {

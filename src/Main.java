@@ -1,42 +1,31 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println(student(15, 25));
+
         System.out.println("Pancake recipe from Daniar");
         makePancake();
+
         formula();
+
         formulaGeometry();
+
         System.out.println(trueFalse(25, 16));
+
         System.out.println(fG(36, 15, true));
+
     }
 
-    public static String fG(int temperatureStudent, int age, boolean isSnow) {
-        if (isSnow && temperatureStudent <= 20 && age <= 40) {
-            return "Have a good walk";
+    public static String student(double ageOfaPerson, double outsideTemperatura) {
+        if (ageOfaPerson >= 20 && ageOfaPerson <= 45 && outsideTemperatura >= -20 && outsideTemperatura <= 30) {
+            return "You can go for a walk";
+        } else if (ageOfaPerson < 20 && outsideTemperatura >= 0 && outsideTemperatura <= 28) {
+            return "You can go for a walk";
+        } else if (ageOfaPerson > 45 && outsideTemperatura >= -10 && outsideTemperatura <= 25) {
+            return "You can go for a walk";
         } else {
             return "Stay at home";
         }
-    }
 
-    public static String trueFalse(int temperature, int ageOfStudent) {
-        if (temperature >= 15 && temperature <= 30 && ageOfStudent >= 16 && ageOfStudent <= 100) {
-            return "GO TO PICNIC";
-        } else {
-            return "Stay at home";
-        }
-    }
-
-    public static void formulaGeometry() {
-        int b1 = 6;
-        int q = 2;
-        int n = 6;
-        System.out.println("Answer:" + (b1 * (Math.pow(q, n))));//возведение в квадрат
-    }
-
-    public static void formula() {
-        int a = 12;
-        int n = 56;
-        int d = 25;
-        System.out.println("Answer:" + (a * n + d * (n - 1)));
     }
 
     private static void makePancake() {
@@ -52,17 +41,35 @@ public class Main {
         System.out.println("Fry the pancake on both sides until golden brown.");
     }
 
-    public static String student(double ageOfaPerson, double outsideTemperatura) {
-        if (ageOfaPerson >= 20 && ageOfaPerson <= 45 && outsideTemperatura >= -20 && outsideTemperatura <= 30) {
-            return "You can go for a walk";
-        } else if (ageOfaPerson < 20 && outsideTemperatura >= 0 && outsideTemperatura <= 28) {
-            return "You can go for a walk";
-        } else if (ageOfaPerson > 45 && outsideTemperatura >= -10 && outsideTemperatura <= 25) {
-            return "You can go for a walk";
+    public static void formula() {
+        int a = 12;
+        int n = 56;
+        int d = 25;
+        System.out.println("Answer:" + (a * n + d * (n - 1)));
+    }
+
+    public static void formulaGeometry() {
+        int b1 = 6;
+        int q = 2;
+        int n = 6;
+        System.out.println("Answer:" + (b1 * (Math.pow(q, n))));//возведение в квадрат
+
+    }
+
+    public static String trueFalse(int temperature, int ageOfStudent) {
+        if (temperature >= 15 && temperature <= 30 && ageOfStudent >= 16 && ageOfStudent <= 100) {
+            return "GO TO PICNIC";
         } else {
             return "Stay at home";
         }
+    }
 
+    public static String fG(int temperatureStudent, int age, boolean isSnow) {
+        if (isSnow && temperatureStudent <= 20 && age <= 40) {
+            return "Have a good walk";
+        } else {
+            return "Stay at home";
+        }
     }
 }
 
